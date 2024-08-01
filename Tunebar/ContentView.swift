@@ -8,14 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var mediaRemoteManager = MediaRemoteManager()
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            if let artwork = mediaRemoteManager.albumArtwork {
+                artwork
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 200, height: 200)
+                    .padding()
+            } else {
+                Text("No Artwork")
+                    .font(.largeTitle)
+                    .padding()
+            }
+
+            Text(mediaRemoteManager.currentTitle)
+                .font(.largeTitle)
+                .padding()
         }
-        .padding()
+        .onAppear {
+            mediaRemoteManager.fetchCurrentTitleAndArtwork()
+        }
     }
 }
 

@@ -14,6 +14,9 @@
 		497511932C4E93A90093E0E4 /* TunebarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497511922C4E93A90093E0E4 /* TunebarTests.swift */; };
 		4975119D2C4E93A90093E0E4 /* TunebarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4975119C2C4E93A90093E0E4 /* TunebarUITests.swift */; };
 		4975119F2C4E93A90093E0E4 /* TunebarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4975119E2C4E93A90093E0E4 /* TunebarUITestsLaunchTests.swift */; };
+		49D23AEF2C5C335F00CA72CD /* MediaRemote in Frameworks */ = {isa = PBXBuildFile; productRef = 49D23AEE2C5C335F00CA72CD /* MediaRemote */; };
+		49D23AF12C5C337300CA72CD /* MediaRemoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D23AF02C5C337300CA72CD /* MediaRemoteManager.swift */; };
+		49D23AF42C5C33D000CA72CD /* PrivateMediaRemote in Frameworks */ = {isa = PBXBuildFile; productRef = 49D23AF32C5C33D000CA72CD /* PrivateMediaRemote */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,7 @@
 		497511982C4E93A90093E0E4 /* TunebarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TunebarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4975119C2C4E93A90093E0E4 /* TunebarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunebarUITests.swift; sourceTree = "<group>"; };
 		4975119E2C4E93A90093E0E4 /* TunebarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunebarUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		49D23AF02C5C337300CA72CD /* MediaRemoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaRemoteManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49D23AEF2C5C335F00CA72CD /* MediaRemote in Frameworks */,
+				49D23AF42C5C33D000CA72CD /* PrivateMediaRemote in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +85,7 @@
 				497511912C4E93A90093E0E4 /* TunebarTests */,
 				4975119B2C4E93A90093E0E4 /* TunebarUITests */,
 				4975117E2C4E93A80093E0E4 /* Products */,
+				49D23AF22C5C33D000CA72CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +104,7 @@
 			children = (
 				497511802C4E93A80093E0E4 /* TunebarApp.swift */,
 				497511822C4E93A80093E0E4 /* ContentView.swift */,
+				49D23AF02C5C337300CA72CD /* MediaRemoteManager.swift */,
 				497511842C4E93A80093E0E4 /* Assets.xcassets */,
 				497511892C4E93A80093E0E4 /* Tunebar.entitlements */,
 				497511862C4E93A80093E0E4 /* Preview Content */,
@@ -129,6 +137,13 @@
 			path = TunebarUITests;
 			sourceTree = "<group>";
 		};
+		49D23AF22C5C33D000CA72CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +160,10 @@
 			dependencies = (
 			);
 			name = Tunebar;
+			packageProductDependencies = (
+				49D23AEE2C5C335F00CA72CD /* MediaRemote */,
+				49D23AF32C5C33D000CA72CD /* PrivateMediaRemote */,
+			);
 			productName = Tunebar;
 			productReference = 4975117D2C4E93A80093E0E4 /* Tunebar.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +236,9 @@
 				Base,
 			);
 			mainGroup = 497511742C4E93A80093E0E4;
+			packageReferences = (
+				49D23AED2C5C335F00CA72CD /* XCRemoteSwiftPackageReference "MediaRemote" */,
+			);
 			productRefGroup = 4975117E2C4E93A80093E0E4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,6 +283,7 @@
 			files = (
 				497511832C4E93A80093E0E4 /* ContentView.swift in Sources */,
 				497511812C4E93A80093E0E4 /* TunebarApp.swift in Sources */,
+				49D23AF12C5C337300CA72CD /* MediaRemoteManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +457,10 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mattiacerati.Tunebar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -460,6 +487,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mattiacerati.Tunebar;
@@ -581,6 +612,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		49D23AED2C5C335F00CA72CD /* XCRemoteSwiftPackageReference "MediaRemote" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/PrivateFrameworks/MediaRemote";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		49D23AEE2C5C335F00CA72CD /* MediaRemote */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49D23AED2C5C335F00CA72CD /* XCRemoteSwiftPackageReference "MediaRemote" */;
+			productName = MediaRemote;
+		};
+		49D23AF32C5C33D000CA72CD /* PrivateMediaRemote */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49D23AED2C5C335F00CA72CD /* XCRemoteSwiftPackageReference "MediaRemote" */;
+			productName = PrivateMediaRemote;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 497511752C4E93A80093E0E4 /* Project object */;
 }
