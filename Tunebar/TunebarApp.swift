@@ -9,12 +9,15 @@ import SwiftUI
 
 @main
 struct TunebarApp: App {
-    
     @StateObject private var mediaRemoteManager = MediaRemoteManager()
-    
+
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        MenuBarExtra {
+            /*ContentView()
+                .environmentObject(mediaRemoteManager)*/
+        } label: {
+            MenuBarItemView()
+                .environmentObject(mediaRemoteManager)
         }
     }
 }

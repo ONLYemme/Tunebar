@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var mediaRemoteManager = MediaRemoteManager()
+    @EnvironmentObject var mediaRemoteManager: MediaRemoteManager
 
     var body: some View {
         VStack {
@@ -16,24 +16,26 @@ struct ContentView: View {
                 artwork
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 200, height: 200)
+                    .frame(width: 100, height: 100)
                     .padding()
             } else {
                 Text("No Artwork")
-                    .font(.largeTitle)
+                    .font(.title)
                     .padding()
             }
 
             Text(mediaRemoteManager.currentTitle)
-                .font(.largeTitle)
+                .font(.title)
                 .padding()
         }
         .onAppear {
             mediaRemoteManager.fetchCurrentTitleAndArtwork()
         }
+        .frame(width: 200)
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(MediaRemoteManager())
 }

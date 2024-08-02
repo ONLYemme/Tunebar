@@ -17,6 +17,7 @@
 		49D23AEF2C5C335F00CA72CD /* MediaRemote in Frameworks */ = {isa = PBXBuildFile; productRef = 49D23AEE2C5C335F00CA72CD /* MediaRemote */; };
 		49D23AF12C5C337300CA72CD /* MediaRemoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D23AF02C5C337300CA72CD /* MediaRemoteManager.swift */; };
 		49D23AF42C5C33D000CA72CD /* PrivateMediaRemote in Frameworks */ = {isa = PBXBuildFile; productRef = 49D23AF32C5C33D000CA72CD /* PrivateMediaRemote */; };
+		49E4675A2C5D1CDA003E1ABB /* MenuBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E467592C5D1CDA003E1ABB /* MenuBarItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 /* Begin PBXFileReference section */
 		4975117D2C4E93A80093E0E4 /* Tunebar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tunebar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		497511802C4E93A80093E0E4 /* TunebarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunebarApp.swift; sourceTree = "<group>"; };
-		497511822C4E93A80093E0E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		497511822C4E93A80093E0E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		497511842C4E93A80093E0E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		497511872C4E93A80093E0E4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		497511892C4E93A80093E0E4 /* Tunebar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tunebar.entitlements; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		4975119C2C4E93A90093E0E4 /* TunebarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunebarUITests.swift; sourceTree = "<group>"; };
 		4975119E2C4E93A90093E0E4 /* TunebarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunebarUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		49D23AF02C5C337300CA72CD /* MediaRemoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaRemoteManager.swift; sourceTree = "<group>"; };
+		49E467592C5D1CDA003E1ABB /* MenuBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +105,9 @@
 			isa = PBXGroup;
 			children = (
 				497511802C4E93A80093E0E4 /* TunebarApp.swift */,
-				497511822C4E93A80093E0E4 /* ContentView.swift */,
 				49D23AF02C5C337300CA72CD /* MediaRemoteManager.swift */,
+				497511822C4E93A80093E0E4 /* ContentView.swift */,
+				49E467592C5D1CDA003E1ABB /* MenuBarItemView.swift */,
 				497511842C4E93A80093E0E4 /* Assets.xcassets */,
 				497511892C4E93A80093E0E4 /* Tunebar.entitlements */,
 				497511862C4E93A80093E0E4 /* Preview Content */,
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49E4675A2C5D1CDA003E1ABB /* MenuBarItemView.swift in Sources */,
 				497511832C4E93A80093E0E4 /* ContentView.swift in Sources */,
 				497511812C4E93A80093E0E4 /* TunebarApp.swift in Sources */,
 				49D23AF12C5C337300CA72CD /* MediaRemoteManager.swift in Sources */,
